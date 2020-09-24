@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="CountDownButton">
+    <attr format="string" name="countDownFormat"/>
+    <attr format="float" name="countDown"/>
+    <attr format="float" name="countDownInterval"/>
+    <attr format="boolean" name="enableCountDown"/>
+  </declare-styleable>
+
+</resources>

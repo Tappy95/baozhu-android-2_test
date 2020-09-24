@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="311dp"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="311dp"
+        android:layout_height="314dp"
+        android:background="@drawable/bg_radius_4_color_ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:lineSpacingExtra="2dp"
+            android:text="收不到短信验证码可能存在以下几种情况："
+            android:textColor="#FF3140"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp"
+            android:text="1、在注册时就获取不了，则可能是用户手机号被拉入短信运营商黑名单，请联系客服QQ：1501305376解决；\n2、自查自身是否曾经设置过将陌生短信设置到垃圾箱等其他文件中；\n3、若获取到过，单后面多次获取后，不能再获取；\n则可能是单位时常内获取太频繁；建议稍后，或者改天再请求短信。\n4、特殊手机号段未收入系统导致；"
+            android:textColor="#A7B1C2"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_1" />
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="14dp"
+            android:lineSpacingExtra="2dp"
+            android:text="如遇收不到短信问题，请先自查，如需进一步解决，请联系客服QQ：1501305376，截图并说明收不到短信的具体发生情况。"
+            android:textColor="@color/color_3c3e5b"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_2" />
+
+
+
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="44dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_radius_20_color_ff3e2b_ff1370"
+            android:gravity="center"
+            android:text="好的"
+            android:textColor="@color/color_ffffff"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_3" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_width="311dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_top_radius_4_color_ff3e2b_ff1370"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="收不到短信?"
+        android:textColor="@color/color_ffffff"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

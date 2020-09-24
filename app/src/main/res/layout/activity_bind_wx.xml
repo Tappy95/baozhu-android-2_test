@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_text_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_f3f5f8"></LinearLayout>
+
+    <LinearLayout style="@style/withdraw_balance_linearLayout"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/withdraw_balance_txt_tip"
+            android:text="支付宝账号" />
+
+        <EditText
+            android:id="@+id/et_zhifubao_account"
+            style="@style/withdraw_balance_edit"
+            android:layout_marginLeft="16dp"
+            android:hint="输入微信账户" />
+    </LinearLayout>
+
+    <View style="@style/withdraw_balance_line" />
+
+    <LinearLayout style="@style/withdraw_balance_linearLayout">
+
+        <TextView
+            style="@style/withdraw_balance_txt_tip"
+            android:text="姓名" />
+
+        <EditText
+            android:id="@+id/et_zhifubao_name"
+            style="@style/withdraw_balance_edit"
+            android:layout_marginLeft="16dp"
+            android:hint="真实姓名" />
+    </LinearLayout>
+
+    <View style="@style/withdraw_balance_line" />
+
+    <LinearLayout style="@style/withdraw_balance_linearLayout">
+
+        <TextView
+            style="@style/withdraw_balance_txt_tip"
+            android:text="手机号" />
+
+        <TextView
+            android:id="@+id/tv_moblie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/color_3c3e5b"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View style="@style/withdraw_balance_line" />
+
+    <LinearLayout style="@style/withdraw_balance_linearLayout">
+
+        <TextView
+            style="@style/withdraw_balance_txt_tip"
+            android:text="验证码" />
+
+        <EditText
+            android:id="@+id/et_code"
+            style="@style/withdraw_balance_edit_code"
+            android:layout_marginLeft="16dp"
+            android:hint="请输入验证码"
+            android:inputType="number" />
+
+        <com.micang.baselibrary.view.countdown.CountDownTimerButton
+            android:id="@+id/get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:text="获取验证码"
+            android:textColor="@color/color_ff732e"
+            android:textSize="15sp"
+            app:countDown="60000"
+            app:countDownFormat="%ds"
+            app:countDownInterval="1000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fff3f5f8"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_bindling"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_btn_bindling"
+            android:text="确认绑定"
+            android:textColor="@color/color_ffffff"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

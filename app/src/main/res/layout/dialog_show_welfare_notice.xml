@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="272dp"
+    android:layout_height="172dp"
+    android:background="@drawable/bg_radius_12_color_ffffff">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="250dp"
+        android:layout_height="104dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="11dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/shape_bc_radius_4_fef8e2">
+
+        <TextView
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="11dp"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="3dp"
+            android:text="    当前抽奖入口的相关内容均为第三方商家提供，用户抽奖所获得的奖励也均由第三方提供，与本平台无关；祝您抽奖愉快！"
+            android:textColor="#EF4B4A"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="174dp"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/icon_dialog_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="免责声明"
+            android:textColor="@color/color_ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:text="知道了(3S)"
+        android:textColor="#485168"
+        android:textSize="14sp" />
+</RelativeLayout>

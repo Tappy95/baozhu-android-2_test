@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_text_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginHorizontal="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius_8_color_f2f4f7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_search" />
+
+            <EditText
+                android:id="@+id/et_gametitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:hint="请输入游戏名称"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="18"
+                android:text=""
+                android:textColor="@color/color_3C3E59"
+                android:textColorHighlight="@color/color_9ea9bc"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="搜索"
+            android:textColor="@color/color_3c3e5b"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/empty_search_layout" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="搜索历史"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/tv_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="3dp"
+            android:src="@drawable/icon_search_delete" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:minHeight="24dp"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:text="推荐游戏"
+        android:textColor="@color/color_9ea9bc"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:overScrollMode="never" />
+</LinearLayout>

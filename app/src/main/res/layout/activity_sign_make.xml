@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_537aef"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/pic_sign_make">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_white_back" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="签到领红包"
+            android:textColor="@color/color_ffffff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_retroactivecard"
+            android:layout_width="95dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/pic_retroactive_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="32dp"
+                android:text="补签卡:"
+                android:textColor="@color/color_333333"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_retroactive_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="0张"
+                android:textColor="@color/fa2e41"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <com.sunfusheng.marqueeview.MarqueeView
+            android:id="@+id/marqueeview"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="60dp"
+            app:mvAnimDuration="4000"
+            app:mvDirection="right_to_left"
+            app:mvInterval="5000"
+            app:mvSingleLine="true"
+            app:mvTextColor="@color/color_ffffff"
+            app:mvTextSize="10sp" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/srcrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="12dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="341dp"
+                android:layout_height="375dp"
+                android:background="@drawable/bg_sign_make1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="51dp"
+                    android:layout_marginRight="45dp"
+                    android:text="当天完成签到任务，不要忘记来点击领取奖励哦～"
+                    android:textColor="@color/color_9ea9bc"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="341dp"
+                android:layout_height="371dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/bg_sign_make2"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="172dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="88dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginRight="81dp"
+                    android:background="@drawable/icon_sign_make_explain" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="27dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/bg_oval_537aef"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="每日签到成功可获得1-8元奖励，如若忘记可在第二天进行补签，补签日期需从第一个未签到的红包开始，当日可正常签到；"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="27dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/bg_oval_537aef"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="连续签到天数越多，奖励越丰厚，每5天派发一次大额现金红包;签满15次至少可得26元奖励!"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="27dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/bg_oval_537aef"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="签到获取的奖励，实际以金币形式发放至金币(可提现);"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="27dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/bg_oval_537aef"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="有任何疑问，官方客服QQ:1501305376或者进麒麟试玩QQ3群:748662195交流;"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="27dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/bg_oval_537aef"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="同一账号连续签到必须同一手机，否则有可能无法领取红包"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="27dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/bg_oval_537aef"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="若未及时签到，可点击【补签】样式的红包进行获取补签卡；若未完成所有任务隔天需重新补签；"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="27dp"
+                    android:layout_marginBottom="67dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/bg_oval_537aef"
+                        android:gravity="center"
+                        android:text="7"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="活动最终解释权归麒麟趣玩所有。"
+                        android:textColor="@color/color_333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="124dp"
+        android:layout_height="24dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="22dp"
+        android:background="@drawable/shape_bc_radius_12_425fb6"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:text="今日完成任务数:"
+            android:textColor="@color/color_ffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_overtask_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="0个"
+            android:textColor="#FEF269"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="184dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/pic_sign_make_todaymoney"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:text="今日签到赚到: "
+            android:textColor="@color/color_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_todaymoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@drawable/icon_coin"
+            android:drawablePadding="3dp"
+            android:text="0"
+            android:textColor="@color/fa2e41"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+</FrameLayout>

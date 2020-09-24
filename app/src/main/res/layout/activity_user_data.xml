@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_text_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_f3f5f8"></LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_change_pic"
+        style="@style/user_data_frameLayout">
+
+        <TextView
+            style="@style/user_data_textview"
+            android:drawableRight="@drawable/icon_data_more"
+            android:text="头像" />
+
+        <com.micang.baozhu.module.view.CircleImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_user_data_head_pic" />
+
+        <View style="@style/user_data_line" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_change_name"
+        style="@style/user_data_frameLayout">
+
+        <TextView
+            style="@style/user_data_textview"
+            android:drawableRight="@drawable/icon_data_more"
+            android:text="昵称" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:text="麒麟000001"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="14sp" />
+
+        <View style="@style/user_data_line" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_change_QQ"
+        style="@style/user_data_frameLayout">
+
+        <TextView
+            style="@style/user_data_textview"
+            android:drawableRight="@drawable/icon_data_more"
+            android:text="QQ" />
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:text=""
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="14sp" />
+
+        <View style="@style/user_data_line" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_two_code"
+        style="@style/user_data_frameLayout">
+
+        <TextView
+            style="@style/user_data_textview"
+            android:text="我的二维码" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/icon_twocode" />
+
+        <View style="@style/user_data_line" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_vip_nmb"
+        style="@style/user_data_frameLayout">
+
+        <TextView
+            style="@style/user_data_textview"
+            android:text="会员等级" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_vippic"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="3dp" />
+
+        <View style="@style/user_data_line" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_experience"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:text="当前经验值：1000 |再积累1000经验"
+        android:textColor="@color/color_9ea9bc"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_f3f5f8"></LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_change_male"
+        style="@style/user_data_frameLayout">
+
+        <TextView
+            style="@style/user_data_textview"
+            android:drawableRight="@drawable/icon_data_more"
+            android:text="性别" />
+
+        <TextView
+            android:id="@+id/tv_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:text="男"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="14sp" />
+
+        <View style="@style/user_data_line" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_change_birthday"
+        style="@style/user_data_frameLayout">
+
+        <TextView
+            style="@style/user_data_textview"
+            android:drawableRight="@drawable/icon_data_more"
+            android:text="生日" />
+
+        <TextView
+            android:id="@+id/tv_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:text="1991-01-01"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="14sp" />
+
+        <View style="@style/user_data_line" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f3f5f8"></LinearLayout>
+
+</LinearLayout>

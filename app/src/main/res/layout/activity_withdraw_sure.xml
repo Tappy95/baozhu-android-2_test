@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color_f05a24_ff1370"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg_color_f05a24_ff1370">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_white_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="余额提现"
+            android:textColor="@color/color_ffffff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_draw_log"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_withdrawlog" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:text="提现记录"
+                android:textColor="@color/color_ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_f2f4f7"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:background="@drawable/bg_color_f05a24_ff1370" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="可提现余额(元)"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/icon_withdraw_notic" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="33dp"
+                android:text="0.00"
+                android:textColor="@color/color_ffffff"
+                android:textSize="30sp" />
+
+            <View
+                android:layout_width="53dp"
+                android:layout_height="62dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/icon_withdraw_pic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/bg_withdraw_select_alipay"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_zhifubao"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:background="@drawable/icon_zhifubao_type" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="支付宝提现"
+                            android:textColor="@color/color_3C3E59"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_weixin"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:background="@drawable/icon_weixin_type" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="微信提现"
+                            android:textColor="@color/color_3C3E59"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/shape_withdraw_buttom_bg"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_not_bind"
+                            android:layout_width="match_parent"
+                            android:layout_height="121dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/ll_clik_bind"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_pic"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_wxname"
+                                    android:layout_width="67dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginTop="2dp"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:lines="1"
+                                    android:text=""
+                                    android:textColor="@color/color_9ea9bc"
+                                    android:textSize="11sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tv_notbind"
+                                    android:layout_width="80dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/bg_stroke_9ea9be_radius_2"
+                                    android:gravity="center"
+                                    android:text="请点击头像绑定"
+                                    android:textColor="@color/color_9ea9bc"
+                                    android:textSize="10sp"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="10dp"
+                                        android:text="真实姓名"
+                                        android:textColor="#A7B1C2"
+                                        android:textSize="11sp" />
+
+                                    <EditText
+                                        android:id="@+id/et_name"
+                                        android:layout_width="67dp"
+                                        android:layout_height="28dp"
+                                        android:background="@drawable/shape_bg_radius4_f2f4f7"
+                                        android:hint=""
+                                        android:lines="1"
+                                        android:maxLength="5"
+                                        android:padding="2dp"
+                                        android:paddingLeft="2dp"
+                                        android:text=""
+                                        android:textColor="@color/color_3C3E59"
+                                        android:textColorHint="@color/color_9ea9bc"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/con_binded"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="8dp"
+                                android:text="真实姓名"
+                                android:textColor="@color/color_A7B1C2"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="33dp"
+                                android:text="支付宝账号"
+                                android:textColor="@color/color_A7B1C2"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_alipay_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="88dp"
+                                android:layout_marginTop="8dp"
+                                android:text=""
+                                android:textColor="@color/color_3c3e59"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_alipay_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="88dp"
+                                android:layout_marginTop="33dp"
+                                android:text=""
+                                android:textColor="@color/color_3c3e59"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_change_alipay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="21dp"
+                                android:layout_marginRight="16dp"
+                                android:text="修改"
+                                android:textColor="@color/color_FF2A4D"
+                                android:textSize="12sp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </android.support.constraint.ConstraintLayout>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:background="@drawable/shape_withdraw_center_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_withdraw_string"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="12dp"
+                            android:text="提现至【支付宝-余额】："
+                            android:textColor="@color/color_3c3e59"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_recycle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycleview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="6dp"
+                                android:layout_marginTop="12dp"
+                                android:overScrollMode="never"
+                                android:scrollbars="none" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="26dp"
+                                    android:gravity="center"
+                                    android:text="11000金币=1元"
+                                    android:textColor="@color/color_A7B1C2"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="16dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/et_input_money"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/shape_withdraw_edit_bg"
+                                    android:gravity="center_vertical"
+                                    android:hint="提现金额"
+                                    android:inputType="number"
+                                    android:paddingLeft="12dp"
+                                    android:textColor="@color/color_3c3e59"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="16dp"
+                                    android:gravity="center_vertical"
+                                    android:text="元"
+                                    android:textColor="@color/color_3c3e59"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="1元起提"
+                                    android:textColor="@color/color_A7B1C2"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="26dp"
+                                    android:gravity="center_vertical|right"
+                                    android:text="11000金币=1元"
+                                    android:textColor="@color/color_A7B1C2"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="114dp"
+                        android:layout_marginHorizontal="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="注册手机号"
+                            android:textColor="@color/color_A7B1C2"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="47dp"
+                            android:text="验证码"
+                            android:textColor="@color/color_A7B1C2"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_moblie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="94dp"
+                            android:layout_marginTop="12dp"
+                            android:text=""
+                            android:textColor="@color/color_3c3e59"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/et_code"
+                            android:layout_width="120dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="86dp"
+                            android:layout_marginTop="41dp"
+                            android:background="@drawable/shape_withdraw_center_bg"
+                            android:gravity="center_vertical"
+                            android:hint="请输入验证码"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/color_3c3e59"
+                            android:textSize="13sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.micang.baselibrary.view.countdown.CountDownTimerButton
+                            android:id="@+id/get_code"
+                            android:layout_width="82dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="41dp"
+                            android:background="@drawable/bg_radius_4_color_f05a24_ff1370"
+                            android:text="获取验证码"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="11sp"
+                            app:countDown="60000"
+                            app:countDownFormat="%ds"
+                            app:countDownInterval="1000"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_not_get_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="94dp"
+                            android:layout_marginTop="81dp"
+                            android:text="没有收到短信？"
+                            android:textColor="@color/color_A7B1C2"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_cashnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="2dp"
+                        android:text="小额秒到！每日限提3笔！\n大额人工审核，24H到账，节假日顺延。"
+                        android:textColor="@color/color_A7B1C2"
+                        android:textSize="11sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_failed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提现失败？"
+                        android:textColor="@color/color_ff3140"
+                        android:textSize="11sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_friend_activity"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/color_FEF8E2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好友活跃度"
+            android:textColor="@color/color_F49E22"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_account_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="提现到账"
+            android:textColor="@color/color_F49E22"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/icon_friendactivity" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_ffffff">
+
+        <Button
+            android:id="@+id/bt_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/bg_radius_20_color_ff3e2b_ff1370"
+            android:text="确认提现"
+            android:textColor="@color/color_ffffff" />
+    </FrameLayout>
+</LinearLayout>

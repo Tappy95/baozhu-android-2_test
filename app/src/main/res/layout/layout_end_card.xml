@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_end"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="32dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/DBE0E6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:text="做人是要有底线的"
+        android:textColor="@color/A0A9BA"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="32dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/DBE0E6" />
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="124dp"
+        android:layout_height="89dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/state_no_tryplay" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="未参与赚钱任务，"
+            android:textColor="@color/color_3c3e5b"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_to_tryplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="现在就去做任务"
+            android:textColor="@color/color_f3572a"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

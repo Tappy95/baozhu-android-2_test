@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/head_text_title" />
+
+    <RelativeLayout
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/head"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/bg_radius_8_color_f5f5f5">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="12dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/icon_phone" />
+
+        <EditText
+            android:id="@+id/et_phonenumber"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/iv_phone"
+            android:background="@null"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="11"
+            android:text=""
+            android:textColor="@color/color_3C3E59"
+            android:textColorHighlight="@color/color_9ea9bc"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_bg_radius_24_ff1370"
+        android:text="下一步"
+        android:textColor="@color/color_ffffff"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="温馨提示："
+            android:textColor="@color/color_B3BAC7"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="24dp"
+            android:text="如需帮助，请联系客服QQ：292898299"
+            android:textColor="@color/color_B3BAC7"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="312dp"
+    android:layout_height="144dp">
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_vip_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="#35353F"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_vip_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="101dp"
+        android:text=""
+        android:textColor="@color/color_9ea9bc"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_vip_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="92dp"
+        android:layout_marginRight="16dp"
+        android:text=""
+        android:textColor="#3D3D48"
+        android:textSize="28sp" />
+</RelativeLayout>

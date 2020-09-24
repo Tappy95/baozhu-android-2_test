@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="264dp"
+    android:layout_height="168dp"
+    android:background="@drawable/pic_pop_bg_exchange_success"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/im_back"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/icon_exchange_x" />
+
+
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="165dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:maxLines="1"
+        android:background="@drawable/bg_radius_10_color_fe3d19"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/color_ffffff"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/icon_exchange_btn"
+        android:text="请在抽奖记录中查看"
+        android:textColor="@color/color_ffffff"
+        android:textSize="16sp" />
+</LinearLayout>
+

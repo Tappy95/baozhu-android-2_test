@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="98dp"
+    android:layout_height="98dp"
+    android:layout_marginLeft="16dp">
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:background="@drawable/icon_upload_pic" />
+</LinearLayout>

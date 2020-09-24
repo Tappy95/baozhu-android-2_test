@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:overScrollMode="never">
+
+    <com.micang.baozhu.module.view.ObserverScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/bg_earlyrecord" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="56dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="259dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="39dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_tips"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="今日"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="06:30-08:30"
+                            android:textColor="@color/color_fdf902"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="可随机瓜分金额(金币)"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/tv_joincoin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="0"
+                            android:textColor="@color/color_fdf902"
+                            android:textSize="44sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="68dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_earlyrecord_people">
+
+                        <TextView
+                            android:id="@+id/tv_joinpeople"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="9dp"
+                            android:text="今日参与挑战人数0人"
+                            android:textColor="@color/color_2a80b2"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_early_clock_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginHorizontal="48dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/bg_click_in"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_join"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="支付1w金币参与瓜分"
+                            android:textColor="@color/color_690200"
+                            android:textSize="18sp"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_countdown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="打卡倒计时"
+                                android:textColor="@color/color_8b8b8b"
+                                android:textSize="18sp" />
+
+                            <cn.iwgang.countdownview.CountdownView
+                                android:id="@+id/countdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:visibility="visible"
+                                app:isHideTimeBackground="true"
+                                app:isShowDay="false"
+                                app:isShowHour="true"
+                                app:isShowMinute="true"
+                                app:isShowSecond="true"
+                                app:isTimeTextBold="true"
+                                app:suffixGravity="center"
+                                app:suffixHour=":"
+                                app:suffixMinute=":"
+                                app:suffixSecond=""
+                                app:suffixTextColor="@color/color_8b8b8b"
+                                app:suffixTextSize="18sp"
+                                app:timeTextColor="@color/color_8b8b8b"
+                                app:timeTextSize="18sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_ffffff"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/color_ffffff"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_record_log"
+                            style="@style/clock_layout">
+
+                            <ImageView
+                                style="@style/clock_image"
+                                android:src="@drawable/icon_earlyrecord_log" />
+
+                            <TextView
+                                style="@style/clock_layouttextview"
+                                android:text="打卡记录" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_record_rules"
+                            style="@style/clock_layout">
+
+                            <ImageView
+                                style="@style/clock_image"
+                                android:src="@drawable/icon_earlyrecord_rules" />
+
+                            <TextView
+                                style="@style/clock_layouttextview"
+                                android:text="打卡规则" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_record_retroactive"
+                            style="@style/clock_layout">
+
+                            <ImageView
+                                style="@style/clock_image"
+                                android:src="@drawable/icon_earlyrecord_retroactive" />
+
+                            <TextView
+                                style="@style/clock_layouttextview"
+                                android:text="补签券" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_record_invite"
+                            style="@style/clock_layout">
+
+                            <ImageView
+                                style="@style/clock_image"
+                                android:src="@drawable/icon_earlyrecord_invite" />
+
+                            <TextView
+                                style="@style/clock_layouttextview"
+                                android:text="邀请好友" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fl_show_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="98dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/bg_radius_8_f9f9f9"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="228dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginHorizontal="54dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_earlyrecord_result"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="打卡结果"
+                                android:textColor="@color/color_690200"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout style="@style/clock_textview_ll">
+
+                                <LinearLayout style="@style/clock_textview_ll_two">
+
+                                    <TextView
+                                        android:id="@+id/tv_get_sum"
+                                        style="@style/clock_textview_sum"
+                                        android:text="0万" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    style="@style/clock_textview_describe"
+                                    android:layout_marginTop="4dp"
+                                    android:text="瓜分奖励(金币)" />
+                            </LinearLayout>
+
+                            <LinearLayout style="@style/clock_textview_ll">
+
+                                <LinearLayout style="@style/clock_textview_ll_two">
+
+                                    <TextView
+                                        android:id="@+id/tv_win_people"
+                                        style="@style/clock_textview_sum"
+                                        android:text="0" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    style="@style/clock_textview_describe"
+                                    android:layout_marginTop="4dp"
+                                    android:text="成功人数(人)" />
+                            </LinearLayout>
+
+                            <LinearLayout style="@style/clock_textview_ll">
+
+                                <LinearLayout style="@style/clock_textview_ll_two">
+
+                                    <TextView
+                                        android:id="@+id/tv_lose_people"
+                                        style="@style/clock_textview_sum"
+                                        android:text="0" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    style="@style/clock_textview_describe"
+                                    android:layout_marginTop="4dp"
+                                    android:text="失败人数(人)" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/icon_earlyrecord_lucky_rankinglist" />
+
+                    <com.micang.baozhu.module.view.NoScrollRecyclerView
+                        android:id="@+id/recycleview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_ffffff"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+    </com.micang.baozhu.module.view.ObserverScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <LinearLayout
+                android:id="@+id/ll_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/icon_white_back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="早起打卡"
+                android:textColor="@color/color_ffffff"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

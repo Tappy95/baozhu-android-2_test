@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_text_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f2f4f7">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="@drawable/bg_withdraw_task" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="92dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="@drawable/bg_radius_8_color_ffffff"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_game1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_game_pic1"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/icon_sign_make_task" />
+
+                        <TextView
+                            android:id="@+id/tv_task_state1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="4dp"
+                            android:text="未完成"
+                            android:textColor="@color/color_9ea9bc"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_game2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="70dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_game_pic2"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/icon_sign_make_task" />
+
+                        <TextView
+                            android:id="@+id/tv_task_state2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="4dp"
+                            android:text="未完成"
+                            android:textColor="@color/color_9ea9bc"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_game3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="32dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_game_pic3"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/icon_sign_make_task" />
+
+                        <TextView
+                            android:id="@+id/tv_task_state3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="4dp"
+                            android:text="未完成"
+                            android:textColor="@color/color_9ea9bc"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_withdraw"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="29dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_radius_22_color_ff3e2b_ff1370"
+                    android:text="解锁任务,秒提现"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_radius_8_color_ffffff"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="89dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/icon_withdraw_tit" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="12dp"
+                        android:layout_height="13dp"
+                        android:background="@drawable/bg_radius_4_color_f22caa_ff2356"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="用户每完成3个任务(同一天同一个游戏多个步骤只算一次)，当前金额即可提现一次，秒到账！不限次数；按天计算每日重置；"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="12dp"
+                        android:layout_height="13dp"
+                        android:background="@drawable/bg_radius_4_color_f22caa_ff2356"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="4000金币以下任务,不计算入解锁任务,当日签到赚和解锁任务不叠加（签到赚完成的任务不计入完成任务的次数中）；"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="12dp"
+                        android:layout_height="13dp"
+                        android:background="@drawable/bg_radius_4_color_f22caa_ff2356"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="用户累计3个活动提现成功后进行第二组解锁计数；"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="12dp"
+                        android:layout_height="13dp"
+                        android:background="@drawable/bg_radius_4_color_f22caa_ff2356"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="宝箱根据用户行为和产品阶段，随机产生金币、翻倍券、免费提现券等奖励；"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="12dp"
+                        android:layout_height="13dp"
+                        android:background="@drawable/bg_radius_4_color_f22caa_ff2356"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="本活动最终解释权归本平台所有！如遇问题，请联系客服一号QQ：1501305376；客服二号QQ：3525001307。"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

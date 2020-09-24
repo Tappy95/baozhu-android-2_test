@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_radius_8_color_ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/color_3c3e59"
+        android:textSize="13sp"
+        tools:text="3:按照图片完成任务，并截图对应图片上传。好的按照图片完成任务，并截图对应图片上传。" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="gone">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/ll_link"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_margin="8dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_link"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_ff2454"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:textColor="@color/color_A4AEC0"
+            android:textSize="13sp"
+            tools:text="http://baidu.com" />
+
+        <TextView
+            android:id="@+id/tv_copy"
+            android:layout_width="72dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="8dp"
+            android:background="@color/color_18C04F"
+            android:gravity="center"
+            android:text="复制"
+            android:textColor="@color/color_A4AEC0"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_single_pic"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/im_single_pic"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="64dp"
+            android:background="@color/color_ff2454" />
+
+        <ImageView
+            android:layout_width="139dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/icon_need_state" />
+    </LinearLayout>
+</LinearLayout>

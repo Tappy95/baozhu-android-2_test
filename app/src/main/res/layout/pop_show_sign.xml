@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="258dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="258dp"
+        android:layout_height="306dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_pop_sign_make"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="33dp"
+            android:text="签满15天"
+            android:textColor="@color/color_e54c3f"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="68dp"
+            android:text="可领取奖励26元"
+            android:textColor="#FFFA9C"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="131dp"
+            android:background="@drawable/icon_bt_1" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="350dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/early_clock_pop_x" />
+</FrameLayout>

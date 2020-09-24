@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".module.home.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_group"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-0.5dp"
+            android:background="@drawable/icon_bg_rb"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_home"
+                style="@style/main_rl"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    style="@style/main_im"
+                    android:src="@drawable/icon_home_press" />
+
+                <TextView
+                    android:id="@+id/tv_home"
+                    style="@style/main_tv"
+                    android:layout_below="@id/iv_home"
+                    android:text="首页"
+                    android:textColor="#FF2751" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pig"
+                style="@style/main_rl"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:id="@+id/iv_pig"
+                    style="@style/main_im"
+                    android:src="@drawable/icon_sign_make" />
+
+                <TextView
+                    android:id="@+id/tv_pig"
+                    style="@style/main_tv"
+                    android:layout_below="@id/iv_pig"
+                    android:text="商城"
+                    android:textColor="@color/color_9ea9bc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_o"
+                style="@style/main_rl"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:id="@+id/iv_o"
+                    style="@style/main_im" />
+
+                <TextView
+                    android:id="@+id/tv_o"
+                    style="@style/main_tv"
+                    android:layout_below="@id/iv_o"
+                    android:text="  "
+                    android:textColor="@color/color_9ea9bc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_task"
+                style="@style/main_rl"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:id="@+id/iv_task"
+                    style="@style/main_im"
+                    android:src="@drawable/icon_generalize" />
+
+                <TextView
+                    android:id="@+id/tv_task"
+                    style="@style/main_tv"
+                    android:layout_below="@id/iv_task"
+                    android:text="邀请"
+                    android:textColor="@color/color_9ea9bc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user"
+                style="@style/main_rl"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:id="@+id/iv_user"
+                    style="@style/main_im"
+                    android:src="@drawable/icon_my" />
+
+                <TextView
+                    android:id="@+id/tv_user"
+                    style="@style/main_tv"
+                    android:layout_below="@id/iv_user"
+                    android:text="我的"
+                    android:textColor="@color/color_9ea9bc" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_vip"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/icon_mainvip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_vip"
+                android:layout_centerHorizontal="true"
+                android:text="会员"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/img_new_welfare"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/icon_new_welfare"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</LinearLayout>

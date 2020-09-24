@@ -1,0 +1,153 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    defaultConfig {
+        applicationId rootProject.ext.android["applicationId"]
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.android["testInstrumentationRunner"]
+        flavorDimensions "default"
+        multiDexEnabled true
+        // 由于项目内针对5.1以下机型做了x5优化，x5在64位手机上需要让AP以32位模式运行，所以需要指定abi
+        ndk { abiFilters "armeabi-v7a" , 'x86','arm64-v8a','x86_64','armeabi'}
+
+    }
+    packagingOptions {
+        doNotStrip "*/armeabi-v7a/*.so"
+        doNotStrip "*/x86/*.so"
+        doNotStrip "*/arm64-v8a/*.so"
+        doNotStrip "*/x86_64/*.so"
+        doNotStrip "armeabi.so"
+    }
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+
+        buildTypes {
+            debug {
+                minifyEnabled false
+                signingConfig signingConfigs.debug
+                proguardFiles 'proguard-rules.pro'
+//            buildConfigField("String", "BASE_SMS_CODE_URL", rootProject.ext.url["debug_SmsCode_url"])
+//            buildConfigField("String", "BASE_LOGIN_URL", rootProject.ext.url["debug_login_url"])
+            }
+            release {
+                //在这里添加：
+                lintOptions {
+                    checkReleaseBuilds false
+                    abortOnError false
+                }
+                minifyEnabled false
+//            buildConfigField("String", "BASE_SMS_CODE_URL", rootProject.ext.url["release_SmsCode_url"])
+//            buildConfigField("String", "BASE_LOGIN_URL", rootProject.ext.url["release_logion_url"])
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+
+
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs += "src/main/res-umeng"
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    //渠道配置，通过产品微调的功能来配置
+    productFlavors {
+
+        baozhu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baozhu"]
+        }
+        zjb {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "zjb"]
+        }
+        kshou {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "kshou"]
+        }
+        lee {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "lee"]
+        }
+        wt {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wt"]
+        }
+        TZW {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "TZW"]
+        }
+        PQK {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "PQK"]
+        }
+    }
+
+//    // 解决 native libraries 不支持cpu的体系结构。允许模拟器调试
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'x86', 'armeabi-v7a', 'x86_64'
+//            universalApk true
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["runner"]
+    androidTestImplementation rootProject.ext.dependencies["espresso"]
+    implementation project(':baselibrary')
+    implementation project(':sdklibrary')
+    implementation files('libs/umeng-analytics-8.0.2.jar')
+    implementation files('libs/umeng-common-2.0.2.jar')
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation files('libs/umeng-share-QQ-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-sina-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.4.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.4.jar')
+    implementation files('libs/umeng-sharetool-6.9.4.jar')
+    implementation files('libs/jcore-android-1.2.7.jar')
+    implementation files('libs/jpush-android-3.2.0.jar')
+    implementation files('libs/alipaySdk-15.6.0-20190226104053.aar')
+    implementation files('libs/YmSdk20190919.aar')
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation files('libs/volley.jar')
+    implementation files('libs/open_ad_sdk.aar')
+    // 以下为 cmgame 的 sdk 包依赖
+    implementation files('libs/cmgame-sdk-tt2103-1.1.6.aar')
+
+    //
+    implementation 'com.liulishuo.filedownloader:library:1.7.7'
+    implementation "org.greenrobot:eventbus:3.1.0-RC"
+    implementation 'com.google.code.gson:gson:2.8.5'
+}
+//cuijianqiang.2020/8/24
+
+//根目录下
+repositories { flatDir { dirs 'libs' } }
+
+dependencies{
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41"
+}
+
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation 'com.liulishuo.filedownloader:library:1.7.7'
+    implementation "org.greenrobot:eventbus:3.1.0-RC"
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation files('libs\\msa_mdid_1.0.13.aar')
+
+}

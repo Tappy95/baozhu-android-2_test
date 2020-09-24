@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_back" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="任务进度"
+            android:textColor="@color/color_000000"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_service"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_task_service" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:text="联系客服"
+                android:textColor="@color/color_000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#FEF8E2"
+        android:inAnimation="@anim/anim_in"
+        android:outAnimation="@anim/anim_out" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/slidingTablayout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#ffffff"
+            tl:tl_indicator_color="#FF3259"
+            tl:tl_indicator_height="2dp"
+            tl:tl_indicator_width="24dp"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textSelectColor="#FF3259"
+            tl:tl_textUnselectColor="#9EA9BC"
+            tl:tl_textsize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5px"
+            android:layout_marginTop="5dp"
+            android:background="@color/color_eeeeee" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

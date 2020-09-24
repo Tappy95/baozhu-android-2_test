@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color_ff706a_fe3a33"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_white_back" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="每日红包"
+            android:textColor="@color/color_ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="规则"
+            android:textColor="@color/color_ffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="210dp"
+        android:background="#F2F5F8" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="每日签到领对应金币"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_Coin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:drawableRight="@drawable/icon_coin"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#FFE971"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="每日红包累计赚取："
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_Coin"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/iv_everyday_pic"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/icon_everyday0" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_radius_8_color_f2f5f8"
+                android:orientation="vertical">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="158dp"
+                    android:background="@drawable/bg_radius_8_color_ffffff">
+
+                    <ImageView
+                        android:id="@+id/iv_sign"
+                        android:layout_width="56dp"
+                        android:layout_height="68dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/icon_everyday_red_sign"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_game"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_game_pic"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/icon_sign_make_task" />
+
+                            <TextView
+                                android:id="@+id/tv_task_state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="4dp"
+                                android:text="点击解锁"
+                                android:textColor="@color/color_9ea9bc"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginHorizontal="26dp"
+                            android:layout_marginTop="18dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="16dp"
+                                android:layout_height="1dp"
+                                android:background="#FF605F" />
+
+                            <View
+                                android:layout_width="16dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="5dp"
+                                android:background="#FF605F" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_task_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_red_pic"
+                                android:layout_width="52dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/icon_everyday_task_red" />
+
+                            <TextView
+                                android:id="@+id/tv_red_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="4dp"
+                                android:text="0元"
+                                android:textColor="@color/FF3352"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_stickDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="108dp"
+                        android:text="您已连续0天领取红包"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="11sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="240dp"
+                        android:layout_marginTop="108dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="领红包提醒"
+                            android:textColor="@color/color_9ea9bc"
+                            android:textSize="11sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_notice"
+                            android:layout_width="24dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="4dp"
+                            android:background="@drawable/icon_notice_open" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:background="@drawable/bg_bottom_radius_8_color_fef8e2"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_reward"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="每次连续领红包7天起，每日额外获得1元奖"
+                            android:textColor="@color/color_F49E22"
+                            android:textSize="10sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="新人任务"
+                    android:textColor="@color/color_3c3e59"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_radius_8_color_ffffff">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/taskRecycleview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <!--   <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="210dp"
+           android:background="#F2F5F8" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="56dp"
+           android:orientation="vertical">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="16dp">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="12dp"
+                   android:text="每日签到领对应金币"
+                   android:textColor="@color/color_ffffff"
+                   android:textSize="11sp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/tv_Coin"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="12dp"
+                   android:drawableRight="@drawable/icon_coin"
+                   android:drawablePadding="3dp"
+                   android:gravity="center"
+                   android:text="0"
+                   android:textColor="#FFE971"
+                   android:textSize="11sp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="12dp"
+                   android:text="每日红包累计赚取："
+                   android:textColor="@color/color_ffffff"
+                   android:textSize="11sp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@id/tv_Coin"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </android.support.constraint.ConstraintLayout>
+
+           <ImageView
+               android:id="@+id/iv_everyday_pic"
+               android:layout_width="match_parent"
+               android:layout_height="12dp"
+               android:layout_marginHorizontal="12dp"
+               android:layout_marginTop="4dp"
+               android:background="@drawable/icon_everyday0" />
+
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/recycleview"
+               android:layout_width="match_parent"
+               android:layout_height="14dp"
+               android:layout_marginLeft="12dp"
+               android:layout_marginTop="4dp"
+               android:overScrollMode="never"
+               android:scrollbars="none" />
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="158dp"
+               android:layout_marginHorizontal="12dp"
+               android:layout_marginTop="8dp"
+               android:background="@drawable/bg_radius_8_color_ffffff">
+
+               <ImageView
+                   android:id="@+id/iv_sign"
+                   android:layout_width="56dp"
+                   android:layout_height="68dp"
+                   android:layout_marginTop="24dp"
+                   android:background="@drawable/icon_everyday_red_sign"
+                   android:visibility="visible"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <LinearLayout
+                   android:id="@+id/ll_task"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="24dp"
+                   android:orientation="horizontal"
+                   android:visibility="gone"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <LinearLayout
+                       android:id="@+id/ll_game"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:orientation="vertical">
+
+                       <ImageView
+                           android:id="@+id/iv_game_pic"
+                           android:layout_width="44dp"
+                           android:layout_height="44dp"
+                           android:layout_gravity="center_horizontal"
+                           android:background="@drawable/icon_sign_make_task" />
+
+                       <TextView
+                           android:id="@+id/tv_task_state"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+                           android:layout_marginTop="4dp"
+                           android:text="点击解锁"
+                           android:textColor="@color/color_9ea9bc"
+                           android:textSize="12sp" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="16dp"
+                       android:layout_height="16dp"
+                       android:layout_marginHorizontal="26dp"
+                       android:layout_marginTop="18dp"
+                       android:gravity="center_vertical"
+                       android:orientation="vertical">
+
+                       <View
+                           android:layout_width="16dp"
+                           android:layout_height="1dp"
+                           android:background="#FF605F" />
+
+                       <View
+                           android:layout_width="16dp"
+                           android:layout_height="1dp"
+                           android:layout_marginTop="5dp"
+                           android:background="#FF605F" />
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/ll_task_red"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:orientation="vertical">
+
+                       <ImageView
+                           android:id="@+id/iv_red_pic"
+                           android:layout_width="52dp"
+                           android:layout_height="44dp"
+                           android:layout_gravity="center_horizontal"
+                           android:background="@drawable/icon_everyday_task_red" />
+
+                       <TextView
+                           android:id="@+id/tv_red_money"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+                           android:layout_marginTop="4dp"
+                           android:text="0元"
+                           android:textColor="@color/FF3352"
+                           android:textSize="12sp" />
+                   </LinearLayout>
+
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/tv_stickDay"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="12dp"
+                   android:layout_marginTop="108dp"
+                   android:text="您已连续0天领取红包"
+                   android:textColor="@color/color_9ea9bc"
+                   android:textSize="11sp"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <LinearLayout
+                   android:id="@+id/ll_notice"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="240dp"
+                   android:layout_marginTop="108dp"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="领红包提醒"
+                       android:textColor="@color/color_9ea9bc"
+                       android:textSize="11sp" />
+
+                   <ImageView
+                       android:id="@+id/iv_notice"
+                       android:layout_width="24dp"
+                       android:layout_height="14dp"
+                       android:layout_marginLeft="4dp"
+                       android:background="@drawable/icon_notice_open" />
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="24dp"
+                   android:background="@drawable/bg_bottom_radius_8_color_fef8e2"
+                   android:gravity="center"
+                   app:layout_constraintBottom_toBottomOf="parent">
+
+                   <TextView
+                       android:id="@+id/tv_reward"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:text="每次连续领红包7天起，每日额外获得1元奖"
+                       android:textColor="@color/color_F49E22"
+                       android:textSize="10sp"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+               </LinearLayout>
+           </android.support.constraint.ConstraintLayout>
+       </LinearLayout>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="12dp"
+           android:layout_marginTop="286dp"
+           android:text="新人任务"
+           android:textColor="@color/color_3c3e59"
+           android:textSize="14sp" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="12dp"
+           android:layout_marginTop="311dp"
+           android:layout_marginBottom="15dp"
+           android:background="@drawable/bg_radius_8_color_ffffff">
+
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/taskRecycleview"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="5dp"
+               android:overScrollMode="never"
+               android:scrollbars="none" />
+       </LinearLayout>-->
+</FrameLayout>

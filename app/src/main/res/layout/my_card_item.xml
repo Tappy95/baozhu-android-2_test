@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f3f5f8"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/user_card_bg">
+
+        <ImageView
+            android:id="@+id/iv_card_type"
+            android:layout_width="50dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/icon_user_card_double"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_card_type_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:text=""
+            android:textColor="@color/F05F2A"
+            app:layout_constraintLeft_toRightOf="@id/iv_card_type"
+            app:layout_constraintTop_toTopOf="@id/iv_card_type" />
+
+        <TextView
+            android:id="@+id/tv_card_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="4dp"
+            android:text=""
+            android:textColor="@color/color_454545"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/tv_card_type_describe"
+            app:layout_constraintTop_toTopOf="@id/tv_card_type_describe" />
+
+        <TextView
+            android:id="@+id/tv_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:text="适用任务:"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_card_type_describe"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_type_describe" />
+
+        <TextView
+            android:id="@+id/tv_apply_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_card_detail"
+            app:layout_constraintTop_toBottomOf="@id/tv_card_detail" />
+
+        <TextView
+            android:id="@+id/tv_economize"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="16dp"
+            android:text=""
+            android:textColor="@color/color_f05f2a"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="11dp"
+            android:text="有效期至 ："
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_last_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="11dp"
+            android:text=""
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_1" />
+
+        <Button
+            android:id="@+id/bt_use"
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_btn_login"
+            android:text="立即使用"
+            android:textColor="@color/color_ffffff"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

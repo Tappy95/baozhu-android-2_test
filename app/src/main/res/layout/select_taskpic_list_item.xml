@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="104dp"
+    android:layout_height="185dp"
+    android:layout_marginLeft="8dp">
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="104dp"
+        android:layout_height="185dp"
+        android:background="@drawable/icon_taskpic_upload" />
+</LinearLayout>

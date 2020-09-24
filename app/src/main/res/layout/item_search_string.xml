@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="24dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/bg_strock_radius_4_color_f2f4f7">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:gravity="center"
+        android:paddingHorizontal="4dp"
+        android:text=""
+        android:textColor="@color/color_3c3e5b"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_text_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f3f5f8">
+
+        <LinearLayout
+            android:id="@+id/ll_no_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="102dp"
+                android:layout_height="89dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/state_no_card" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:text="暂时没有卡券"
+                android:textColor="@color/color_3c3e5b"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_hava_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="10dp"
+                android:overScrollMode="never"></android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

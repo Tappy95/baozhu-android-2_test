@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#211989"
+    android:orientation="vertical">
+
+    <include layout="@layout/white_head_text_title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/srcrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_ffffff"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:text="保存二维码分享给你的好友，赶紧让他来领红包吧！"
+                android:textColor="@color/color_3c3e5b"
+                android:textSize="13sp" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_pic"
+                android:layout_width="280dp"
+                android:layout_height="374dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_qrcode"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_qr"
+                    android:layout_width="94dp"
+                    android:layout_height="94dp"
+                    android:layout_marginHorizontal="93dp"
+                    android:layout_marginTop="146dp" />
+
+                <TextView
+                    android:id="@+id/tv_invitation_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="68dp"
+                    android:text="我的邀请码:xxxxxxxxxx"
+                    android:textColor="@color/color_f9ff5d"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_share"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EFEFEF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/bg_radius_20_color_ff3e2b_ff1370"
+            android:gravity="center"
+            android:text="保存至相册并分享"
+            android:textColor="@color/color_ffffff"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

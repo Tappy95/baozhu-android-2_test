@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f3f5f8"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/user_encourage_pop_bg">
+
+        <ImageView
+            android:id="@+id/iv_gamecompany_pic"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/no_banner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gamecompany_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:text="游戏标题"
+            android:textColor="@color/color_3c3e59"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/iv_gamecompany_pic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="新用户在任意游戏累计赢"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_gamecompany_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_gamecompany_name" />
+
+        <Button
+            android:id="@+id/bt_begin"
+            android:layout_width="72dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/bg_game_company_item"
+            android:text="开始任务"
+            android:textColor="@color/color_ffffff"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

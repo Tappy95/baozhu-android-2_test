@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_picker"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="分享到"
+        android:textColor="#061128"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="11dp"
+        android:background="#FEF8E2"
+        android:text="分享完后请直接返回当前应用，否则可能无法获取分享奖励。"
+        android:textColor="#F49E22"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_friends"
+            style="@style/home_relativelayout">
+
+            <ImageView
+                android:id="@+id/friends"
+                style="@style/early_invite_imageview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/friends_circle" />
+
+            <TextView
+                style="@style/invite_textview"
+                android:layout_below="@id/friends"
+                android:text="朋友圈" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_weixin"
+            style="@style/home_relativelayout">
+
+            <ImageView
+                android:id="@+id/weixin"
+                style="@style/early_invite_imageview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/weixin" />
+
+            <TextView
+                style="@style/invite_textview"
+                android:layout_below="@id/weixin"
+                android:text="微信" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_qq"
+            style="@style/home_relativelayout">
+
+            <ImageView
+                android:id="@+id/qq"
+                style="@style/early_invite_imageview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/qq" />
+
+            <TextView
+                style="@style/invite_textview"
+                android:layout_below="@id/qq"
+                android:text="QQ" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="#DADAE5" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="取消"
+        android:textColor="@color/color_9ea9bc" />
+</LinearLayout>

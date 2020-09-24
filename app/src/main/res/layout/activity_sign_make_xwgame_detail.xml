@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/head_text_title" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bar"
+        tools:context="com.xw.xianwan.AdListActivity" />
+
+
+    <TextView
+        android:id="@+id/tv_start_download"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ff5e0d"
+        android:gravity="center"
+        android:text="开始下载"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="gone" />
+</RelativeLayout>

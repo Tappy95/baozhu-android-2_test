@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/user_encourage_pop_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="活跃鼓励金"
+            android:textColor="@color/color_3c3e59"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_encourageCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/icon_coin"
+                android:drawablePadding="4dp"
+                android:text=""
+                android:textColor="@color/F05F2A"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="活跃鼓励金已到账"
+            android:textColor="@color/color_3c3e59"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/bt_goon"
+            android:layout_width="240dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_btn_4"
+            android:text="继续赚钱"
+            android:textColor="@color/color_ffffff"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_noStickDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_noStickDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您已有N天未领取鼓励金！"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="24dp"
+                android:text="每日鼓励金保留4天（试玩VIP仅当天有效）"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/answer_bg"
+    android:orientation="vertical"
+    tools:context="com.micang.baozhu.module.answer.AnswerActivity">
+
+    <include layout="@layout/white_head_text_title" />
+
+    <Button
+        android:id="@+id/bt_createrom"
+        android:layout_width="328dp"
+        android:layout_height="88dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/icon_createroom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="44dp"
+        android:text="输入邀请码直接参与"
+        android:textColor="@color/color_9ea9bc"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="88dp"
+            android:background="@drawable/icon_input_code1">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="139dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="39dp"
+                android:background="@null"
+                android:hint="请输入邀请码"
+                android:inputType="phone"
+                android:lines="1"
+
+                android:text=""
+                android:textColor="@color/color_3C3E59"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_in"
+            android:layout_width="127dp"
+            android:layout_height="88dp"
+            android:background="@drawable/icon_input_code2"
+            android:text="快速进入"
+            android:textColor="#2D2D2D"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="38dp"
+            android:text="最热资讯"
+            android:textColor="@color/color_333333"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="资讯当日已赚"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_Coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="16dp"
+                android:drawableRight="@drawable/icon_coin"
+                android:drawablePadding="4dp"
+                android:text="0"
+                android:textColor="#FF3259"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="14dp"
+        android:visibility="gone"
+        android:background="#FEF8E2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="据说查看列表页广告，可获得双倍奖励哦"
+            android:textColor="@color/color_F49E22"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/icon_information_close" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/slidingTablayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#ffffff"
+            tl:tl_indicator_color="#FFF35929"
+            tl:tl_indicator_height="2dp"
+            tl:tl_indicator_width="24dp"
+            tl:tl_tab_space_equal="false"
+            tl:tl_tab_width="65dp"
+            tl:tl_textSelectColor="#FFF35929"
+            tl:tl_textUnselectColor="#FF9EA9BC"
+            tl:tl_textsize="16sp" />
+
+        <include layout="@layout/line" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

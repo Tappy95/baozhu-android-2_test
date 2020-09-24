@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="264dp"
+    android:layout_height="98dp"
+    android:background="@drawable/bg_radius_8_color_ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:text="请先完成领取过的任务再开始新的任务哦～"
+        android:textColor="#444761"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:layout_marginTop="17dp"
+        android:background="#F7F7F7" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="2S"
+        android:textColor="#FF3D62"
+        android:textSize="15sp" />
+</LinearLayout>

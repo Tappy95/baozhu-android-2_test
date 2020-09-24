@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_bg"
+    android:background="@color/color_f2f4f7"
+    android:layout_height="48dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_game_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="充值高返厉害"
+        android:textColor="@color/color_3c3e5b"
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#EBEBEB" />
+</RelativeLayout>

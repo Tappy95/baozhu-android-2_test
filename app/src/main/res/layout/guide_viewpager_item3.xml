@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="283dp"
+        android:layout_height="282dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="108dp"
+        android:src="@drawable/pic_guide3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="23dp"
+        android:text="邀请好友多赚多得"
+        android:textColor="@color/color_3c3e5b"
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="9dp"
+        android:text="升级为运营总监更有推广收益"
+        android:textColor="#A2ABBB"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_bg_radius22"
+        android:onClick="goHome">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="立即赚钱"
+            android:textColor="#FF2851"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

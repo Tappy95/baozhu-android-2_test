@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="256dp"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/rl"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius_8_color_ffffff"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/tv_1"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/no_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_1">
+
+            <TextView
+                android:id="@+id/tv_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:maxLength="9"
+                android:text=""
+                android:textColor="@color/color_3c3e5b"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_discout"
+                android:layout_width="31dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/icon_sign_make_diascout"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llM"
+            android:layout_width="224dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_bc_radius_4_fef8e2"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llD">
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="12dp"
+                android:text="当前任务最高可奖励"
+                android:textColor="@color/color_F49E22"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_ga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/llM">
+
+            <LinearLayout
+                android:id="@+id/ll_change_game"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_bg_change_radius24_stroke_ff3e2b"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/icon_change_b" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:text="换个任务"
+                    android:textColor="#FF333D"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_begin"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/shape_bg_change_button"
+                android:text="继续赚钱"
+                android:textColor="@color/color_ffffff"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="越努力，越幸运"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_ga" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_l" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_back_list"
+        android:layout_width="256dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_top_radius_8_color_ff3e2b"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/icon_back_list" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:text="返回上一页"
+            android:textColor="@color/color_ffffff"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl">
+
+        <ImageView
+            android:id="@+id/iv_welfare"
+            android:layout_width="256dp"
+            android:layout_height="56dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:id="@+id/fl_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/iv_welfare"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/early_clock_pop_x" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_top_radius_16_color_ffffff"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_top_radius_16_color_fef8e2">
+
+        <TextView
+            android:id="@+id/tv_game_acout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="当日完成3个任务解锁签到，秒领取!"
+            android:textColor="@color/color_F49E22"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/icon_sign_make_task_close" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_game1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_game_pic1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_sign_make_task" />
+
+            <TextView
+                android:id="@+id/tv_task_state1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="4dp"
+                android:text="未完成"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_game2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="58dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_game_pic2"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_sign_make_task" />
+
+            <TextView
+                android:id="@+id/tv_task_state2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="4dp"
+                android:text="未完成"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_game3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="58dp"
+            android:layout_marginRight="56dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_game_pic3"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_sign_make_task" />
+
+            <TextView
+                android:id="@+id/tv_task_state3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="4dp"
+                android:text="未完成"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_1"
+            android:layout_width="25dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="49dp"
+            android:visibility="invisible"
+            android:background="@drawable/icon_sign_make_indicate" />
+
+        <ImageView
+            android:id="@+id/iv_2"
+            android:layout_width="25dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="79dp"
+            android:visibility="invisible"
+            android:background="@drawable/icon_sign_make_indicate" />
+
+        <ImageView
+            android:id="@+id/iv_3"
+            android:layout_width="25dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="79dp"
+            android:visibility="invisible"
+            android:background="@drawable/icon_sign_make_indicate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:layout_marginHorizontal="17dp"
+        android:background="@drawable/bg_sign_make_game"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/gamelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/tv_1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/no_banner"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_game_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="18dp"
+                android:ellipsize="end"
+                android:maxLength="12"
+                android:text="游戏标题"
+                android:textColor="@color/color_3c3e59"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/tv_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_discout"
+                android:layout_width="40dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/icon_sign_make_diascout"
+                app:layout_constraintLeft_toRightOf="@id/tv_game_name"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/tv_try_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="1659人在玩"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@id/tv_game_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_game_name" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/DBE0E6"
+                app:layout_constraintLeft_toRightOf="@id/tv_try_number"
+                app:layout_constraintTop_toBottomOf="@id/tv_game_name" />
+
+            <TextView
+                android:id="@+id/tv_try_lastdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:text="还剩33天"
+                android:textColor="@color/color_9ea9bc"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toRightOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/tv_game_name" />
+
+            <TextView
+                android:id="@+id/tv_game_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="69dp"
+                android:text="+12335.56元"
+                android:textColor="@color/fa2e41"
+                android:textSize="24sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/piglayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_pig_pic"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_pig_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="18dp"
+                android:text=""
+                android:textColor="@color/color_3c3e59"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/iv_pig_pic"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_ask_for"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textColor="@color/fa2e41"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@id/tv_pig_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_pig_name" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="58dp"
+        android:layout_marginTop="12dp"
+        android:text="完成任务奖励中的一个即可算为一个签到任务。"
+        android:textColor="@color/color_9ea9bc"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_change_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_change" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:text="换个任务"
+                android:textColor="@color/color_3c3e5b"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="51dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/bt_begin"
+                android:layout_width="160dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/icon_sign_make_bt"
+                android:gravity="center"
+                android:text="开始赚钱"
+                android:textColor="@color/color_ffffff"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="64dp"
+                android:layout_height="24dp"
+                android:layout_above="@id/bt_begin"
+                android:layout_gravity="right"
+                android:layout_marginTop="-55dp"
+                android:background="@drawable/icon_sign_make_add">
+
+                <TextView
+                    android:id="@+id/tv_add_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="4dp"
+                    android:text="额外+1元"
+                    android:textColor="#FF1965"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

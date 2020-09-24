@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_ffffff">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text=""
+            android:textColor="@color/color_000000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="61dp"
+            android:layout_height="20dp"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/icon_share_p" />
+    </RelativeLayout>
+
+    <include layout="@layout/line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+
+        <com.micang.baozhu.module.view.CountDownProgressBar
+            android:id="@+id/cpb_countdown"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="64dp"
+            android:visibility="invisible"
+            app:countDown_centerTextColor="@color/color_ffffff"
+            app:countDown_centerTextSize="11sp"
+            app:countDown_circleWidth="3dp"
+            app:countDown_firstColor="@color/color_9ea9bc"
+            app:countDown_isShowGradient="true"
+            app:countDown_secondColor="@color/color_ff506a" />
+
+    </FrameLayout>
+</LinearLayout>

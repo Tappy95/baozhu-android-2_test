@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- 代表的根目录: Environment.getExternalStorageDirectory()-->
+     <external-path path="" name="external" />
+     <!--代表的根目录： Context.getFilesDir()-->
+    <files-path path="" name="files"/>
+    <!--代表的根目录: getCacheDir()-->
+    <cache-path path="" name="cache"/>
+  <!--  <files-path name="my_images" path="images/"/>-->
+    <files-path name="pceggs" path="downloads"/>
+    <root-path name="root_path" path="."/>
+    <external-files-path name="external_files_path" path="Download" />
+    <!--为了适配所有路径可以设置 path = "." -->
+</paths>

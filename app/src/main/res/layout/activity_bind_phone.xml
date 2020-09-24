@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_text_title" />
+
+    <RelativeLayout
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/head"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/bg_radius_8_color_f5f5f5">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="12dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/icon_phone" />
+
+        <EditText
+            android:id="@+id/et_phonenumber"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/iv_phone"
+            android:background="@null"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="11"
+            android:text=""
+            android:textColor="@color/color_3C3E59"
+            android:textColorHighlight="@color/color_9ea9bc"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_code"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/phone"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_radius_8_color_f5f5f5">
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="12dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/icon_code" />
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="240dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/iv_code"
+            android:background="@null"
+            android:digits="0123456789"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="10"
+            android:text=""
+            android:textColor="@color/color_3C3E59"
+            android:textSize="14sp" />
+
+        <com.micang.baselibrary.view.countdown.CountDownTimerButton
+            android:id="@+id/get_code"
+            android:layout_width="88dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_bg_radius6_ff3e2b"
+            android:text="获取验证码"
+            android:textColor="@color/color_ffffff"
+            android:textSize="12sp"
+            app:countDown="60000"
+            app:countDownFormat="%ds"
+            app:countDownInterval="1000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_psw"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/rl_code"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_radius_8_color_f5f5f5"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_psw"
+            android:layout_width="12dp"
+            android:layout_height="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/icon_psw" />
+
+        <EditText
+            android:id="@+id/et_psw"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/iv_psw"
+            android:background="@null"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="密码（6-18位数字、字母）"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="18"
+            android:text=""
+            android:textColor="@color/color_3C3E59"
+            android:textColorHighlight="@color/color_9ea9bc"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/rl_psw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_bg_radius_24_ff1370"
+        android:text="绑定手机号"
+        android:textColor="@color/color_ffffff"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="新用户登录成功后请在我的里面设置登录密码"
+        android:textColor="@color/ff2b49"
+        android:textSize="12sp" />
+</RelativeLayout>

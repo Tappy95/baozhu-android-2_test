@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="272dp"
+    android:layout_height="193dp"
+    android:background="@drawable/bg_radius_8_color_ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shape_bc_radius_4_f2f5f8">
+
+        <EditText
+            android:id="@+id/et_psw"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:background="@null"
+            android:hint="请输入麒麟支付密码"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="18"
+            android:text=""
+            android:textColor="@color/color_3C3E59"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_forget_psw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="忘记密码?"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_set_psw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="没有支付密码？去设置"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_radius_22_color_ff3e2b_ff1370"
+        android:text="确定"
+        android:textColor="@color/color_ffffff"
+        android:textSize="14sp" />
+</LinearLayout>

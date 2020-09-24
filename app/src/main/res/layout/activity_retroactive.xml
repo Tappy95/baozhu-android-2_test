@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_537aef"
+    android:orientation="vertical">
+
+    <include layout="@layout/white_head_text_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="完整观看完视频，即可获得补签卡一张"
+            android:textColor="@color/color_3c3e5b"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="观看完整视频，回到当前页面"
+            android:textColor="@color/color_9ea9bc"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_radius4_f2f4f7">
+
+            <ImageView
+                android:id="@+id/iv_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/pic_retroactive_video" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

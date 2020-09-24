@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="264dp"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="264dp"
+        android:layout_height="237dp"
+        android:background="@drawable/bg_radius_4_color_ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/tv_1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/icon_head"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="开通任意VIP"
+            android:textColor="#FF2159"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="立享提现任意金额!"
+            android:textColor="#A4AEC0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_details" />
+
+        <LinearLayout
+            android:id="@+id/ll_ga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_money">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_bg_change_radius24_stroke_ff3e2b"
+                android:gravity="center"
+                android:text="我再想想"
+                android:textColor="#FF333D"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/shape_bg_change_button"
+                android:text="立即开通"
+                android:textColor="@color/color_ffffff"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_width="264dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_top_radius_4_color_ff3e2b_ff1370"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="其他金额提现？"
+        android:textColor="@color/color_ffffff"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

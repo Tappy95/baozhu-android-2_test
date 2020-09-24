@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="311dp"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="311dp"
+        android:layout_height="398dp"
+        android:background="@drawable/bg_radius_4_color_ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:lineSpacingExtra="2dp"
+            android:text="支付宝提现失败？"
+            android:textColor="#FF3140"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp"
+            android:text="1、填写的支付宝账号与您实际支付宝账号不一致；\n（比如：你填写的是电话形式，但你实际支付宝是邮箱形式）\n2、填写的支付宝账号对应多个实际支付宝账号，导致支付宝不知道向哪个账号打款而失败。\n3、数据请求超时导致提现失败转向人工审核（情况较少）"
+            android:textColor="@color/color_3c3e5b"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp"
+            android:text="微信提现失败？"
+            android:textColor="#FF3140"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_2" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp"
+            android:text="1、微信未实名；\n2、填写的姓名与您微信实名的真实姓名不一致。"
+            android:textColor="@color/color_3c3e5b"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_3" />
+
+        <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp"
+            android:text="提现失败的其他原因："
+            android:textColor="#FF3140"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_4" />
+
+        <TextView
+            android:id="@+id/tv_6"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="2dp"
+            android:text="1、填写的微信姓名和您支付宝真实姓名不一致；\n2、支付宝绑卡因存在同一个用户注册使用多张卡注册多个账号刷量行为导致换绑卡异常。"
+            android:textColor="@color/color_3c3e5b"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_5" />
+
+        <TextView
+            android:id="@+id/tv_7"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="2dp"
+            android:lineSpacingExtra="2dp"
+            android:text="如遇提现失败问题，请先自查，如需进一步解决，请联系客服QQ：1501305376，截图并说明提现失败的具体发生情况。"
+            android:textColor="#A7B1C2"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_6" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="44dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_radius_20_color_ff3e2b_ff1370"
+            android:gravity="center"
+            android:text="好的"
+            android:textColor="@color/color_ffffff"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_7" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_width="311dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_top_radius_4_color_ff3e2b_ff1370"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="提现失败自查表"
+        android:textColor="@color/color_ffffff"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

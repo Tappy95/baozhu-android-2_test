@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- aar用到的-->
+    <external-path name="51xianwan" path="51xianwan" />
+    <files-path  name="downloads" path="downloads"/>
+    <!--项目中用到的-->
+</paths>

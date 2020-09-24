@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/color_ffffff">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text=""
+            android:textColor="@color/color_000000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/pic_baoqu_banner" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/move_view_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="打开游戏悬浮窗功能"
+                android:visibility="gone" />
+
+            <!--接入时需要拷贝如下的布局，包括GameView外层的LinearLayout-start -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <com.cmcm.cmgame.GameView
+                    android:id="@+id/gameView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    app:cmgame_category_title_text_color="#FF222222"
+                    app:cmgame_category_title_text_size="15sp"
+                    app:cmgame_view_background="@drawable/bg_radius_8_color_ffffff" />
+
+                <!--cmgame_category_title_text_color 分类目录文字颜色-->
+                <!--cmgame_category_title_text_size 分类目录文字大小-->
+                <!--cmgame_view_background 整个View背景，demo使用的是8dp圆角白底-->
+            </LinearLayout>
+            <!--接入时需要拷贝的布局，包括GameView外层的LinearLayout-end -->
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

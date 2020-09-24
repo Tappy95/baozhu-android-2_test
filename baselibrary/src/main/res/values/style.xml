@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="animTranslate">
+        <item name="android:windowEnterAnimation">@anim/translate_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_out</item>
+    </style>
+
+    <style name="animAlpha">
+        <item name="android:windowEnterAnimation">@anim/alpha_in</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out</item>
+    </style>
+
+    <style name="animScale">
+        <item name="android:windowEnterAnimation">@anim/scale_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_out</item>
+    </style>
+
+    <style name="animRotate">
+        <item name="android:windowEnterAnimation">@anim/rotate_in</item>
+        <item name="android:windowExitAnimation">@anim/rotate_out</item>
+    </style>
+
+    <style name="custom_dialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+    <style name="custom_dialog3" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.8</item>
+    </style>
+    <style name="picker_view_scale_anim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+</resources>

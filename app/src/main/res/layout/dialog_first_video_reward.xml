@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="256dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="256dp"
+        android:layout_height="263dp"
+        android:background="@drawable/bg_video_home_dialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_radius_8_color_ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_pic">
+
+        <Button
+            android:id="@+id/bt_get"
+            android:layout_width="192dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_radius_22_color_ff3e2b_ff1370"
+            android:text="立即领取"
+            android:textColor="@color/color_ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="看完视频额外赠送600金币！"
+            android:textColor="@color/FF3352"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical"
+    tools:context="com.micang.baozhu.module.answer.SetQuestionActivity">
+
+    <include layout="@layout/head_text_title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_status"
+                android:layout_width="360dp"
+                android:layout_height="137dp"
+                android:src="@drawable/icon_checkquestion1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="题目类型"
+                android:textColor="@color/color_3c3e5b"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_question_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/et_question_bg">
+
+                <TextView
+                    android:id="@+id/tv_question_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:text=""
+                    android:textColor="@color/color_3c3e59"
+                    android:textColorHint="@color/color_9ea9bc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="题目内容"
+                    android:textColor="@color/color_3c3e5b"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（最少10个字，最多30个字）"
+                    android:textColor="@color/color_9ea9bc"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="104dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/et_question_bg">
+
+                <EditText
+                    android:id="@+id/et_question_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入题目内容"
+                    android:maxLength="30"
+                    android:text=""
+                    android:textColor="@color/color_3c3e59"
+                    android:textColorHint="@color/color_9ea9bc"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="题目答案"
+                    android:textColor="@color/color_3c3e5b"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（请输入一个正确答案、至少一个错误答案）"
+                    android:textColor="@color/color_9ea9bc"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/et_question_bg">
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/tv_question_type_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="正确的"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_question_answer_true"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入"
+                    android:lines="1"
+                    android:maxLength="30"
+                    android:text=""
+                    android:textColor="@color/color_3c3e59"
+                    android:textColorHint="@color/color_9ea9bc"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_question_bg">
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/tv_question_type_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="错误的"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_question_answer_false1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入"
+                    android:lines="1"
+                    android:maxLength="30"
+                    android:text=""
+                    android:textColor="@color/color_3c3e59"
+                    android:textColorHint="@color/color_9ea9bc"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_question_bg">
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/tv_question_type_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="错误的"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_question_answer_false2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入"
+                    android:lines="1"
+                    android:maxLength="30"
+                    android:text=""
+                    android:textColor="@color/color_3c3e59"
+                    android:textColorHint="@color/color_9ea9bc"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_question_bg">
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/tv_question_type_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="错误的"
+                        android:textColor="@color/color_9ea9bc"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_question_answer_false3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="请输入"
+                    android:lines="1"
+                    android:maxLength="30"
+                    android:text=""
+                    android:textColor="@color/color_3c3e59"
+                    android:textColorHint="@color/color_9ea9bc"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="65dp"
+                android:background="@drawable/shape_btn_login"
+                android:text="提交审核"
+                android:textColor="@color/color_ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvreason"
+    android:layout_width="60dp"
+    android:layout_height="22dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/shape_bg_radius12_stroke_a2abbc"
+    android:gravity="center"
+    android:text=""
+    android:textColor="#A2ABBC"
+    android:textSize="11sp">
+
+</TextView>
