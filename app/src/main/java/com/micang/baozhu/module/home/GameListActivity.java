@@ -226,7 +226,7 @@ public class GameListActivity extends BaseActivity {
                         @Override
                         public void onSuccess(BaseResult response) {
                             String url = (String) response.data;
-                            Intent intent = new Intent(GameListActivity.this, XWGameDetailActivity.class);
+                            Intent intent = new Intent(GameListActivity.this, MYGameDetailsActivity.class);
                             intent.putExtra("URLS", url);
                             intent.putExtra("bean", listBean);
                             startActivity(intent);
@@ -238,7 +238,7 @@ public class GameListActivity extends BaseActivity {
                         @Override
                         public void onSuccess(BaseResult response) {
                             String url = (String) response.data;
-                            Intent intent = new Intent(GameListActivity.this, XWGameDetailActivity.class);
+                            Intent intent = new Intent(GameListActivity.this, MYGameDetailsActivity.class);
                             intent.putExtra("URLS", url);
                             intent.putExtra("bean", listBean);
                             startActivity(intent);
