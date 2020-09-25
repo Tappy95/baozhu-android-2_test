@@ -1,11 +1,14 @@
 package com.micang.baozhu.module.web;
 
+import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.content.ContextCompat;
+import android.telephony.TelephonyManager;
 import android.text.Html;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -21,6 +24,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.micang.baozhu.AppContext;
+import com.micang.baozhu.module.home.GameListActivity;
 import com.micang.baozhu.util.CoordinatesBean;
 import com.micang.baozhu.util.GyrosensorUtils;
 import com.micang.baozhu.util.ToastUtils;
@@ -272,6 +276,17 @@ public class MYGameDetailsActivity extends BaseActivity {
         getWindow().setAttributes(lp);
     }
 
+//    public String getIMEI() {
+//        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+//        @SuppressLint("MissingPermission") String imei = telephonyManager.getDeviceId();
+//        if (EmptyUtils.isEmpty(imei)) {
+//            //由于Android 10系统限制，无法获取IMEI等标识，如果为空再去获取Android ID作为标识进行传递
+//            String deviceId = Settings.System.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+//            imei = deviceId;
+//        }
+//        return imei;
+//    }
+
     private void getUrl() {
         if ("PCDD".equals(interfaceName)) {
             HttpUtils.toPlay(moblie, gameId).enqueue(new Observer<BaseResult>() {
@@ -307,6 +322,36 @@ public class MYGameDetailsActivity extends BaseActivity {
                 public void onSuccess(BaseResult response) {
                     String url = (String) response.data;
                     Intent intent = new Intent(MYGameDetailsActivity.this, NextXWGameDetailActivity.class);
+                    intent.putExtra("URLS", url);
+                    intent.putExtra("bean", gameBean);
+                    backPop.getPopupWindow().dismiss2();
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
+        if ("xhm_api".equals(interfaceName)) {
+            HttpUtils.toPlay(moblie, gameId).enqueue(new Observer<BaseResult>() {
+                @Override
+                public void onSuccess(BaseResult response) {
+//                    String imei = getIMEI();
+                    String url = (String) response.data + "&deviceId=" + imei;
+                    Intent intent = new Intent(MYGameDetailsActivity.this, NextMYGameDetailsActivity.class);
+
+                    intent.putExtra("URLS", url);
+                    intent.putExtra("bean", gameBean);
+                    backPop.getPopupWindow().dismiss2();
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
+        if ("ABX_Api".equals(interfaceName)) {
+            HttpUtils.toPlay(moblie, gameId).enqueue(new Observer<BaseResult>() {
+                @Override
+                public void onSuccess(BaseResult response) {
+                    String url = (String) response.data;
+                    Intent intent = new Intent(MYGameDetailsActivity.this, NextMYGameDetailsActivity.class);
                     intent.putExtra("URLS", url);
                     intent.putExtra("bean", gameBean);
                     backPop.getPopupWindow().dismiss2();
