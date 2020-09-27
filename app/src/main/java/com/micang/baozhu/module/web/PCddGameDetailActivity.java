@@ -19,6 +19,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
+import android.telephony.TelephonyManager;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
@@ -504,7 +505,42 @@ public class PCddGameDetailActivity extends BaseActivity implements View.OnClick
                 }
             });
         }
+        if ("xhm_api".equals(interfaceName)) {
+            HttpUtils.toPlay(moblie, gameId).enqueue(new Observer<BaseResult>() {
+                @SuppressLint("HardwareIds")
+                @Override
+                public void onSuccess(BaseResult response) {
+                    String imei = null;
+                    TelephonyManager telephonyMgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+                    if (telephonyMgr != null) {
+                        imei = telephonyMgr.getDeviceId();
+                    }
+                    String url = (String) response.data + "&deviceId=" + imei;
+//                    String url = (String) response.data;
+                    Intent intent = new Intent(PCddGameDetailActivity.this, NextMYGameDetailsActivity.class);
 
+                    intent.putExtra("URLS", url);
+                    intent.putExtra("bean", gameBean);
+                    backPop.getPopupWindow().dismiss2();
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
+        if ("ABX_Api".equals(interfaceName)) {
+            HttpUtils.toPlay(moblie, gameId).enqueue(new Observer<BaseResult>() {
+                @Override
+                public void onSuccess(BaseResult response) {
+                    String url = (String) response.data;
+                    Intent intent = new Intent(PCddGameDetailActivity.this, NextMYGameDetailsActivity.class);
+                    intent.putExtra("URLS", url);
+                    intent.putExtra("bean", gameBean);
+                    backPop.getPopupWindow().dismiss2();
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
     }
 
     private void changeGame() {

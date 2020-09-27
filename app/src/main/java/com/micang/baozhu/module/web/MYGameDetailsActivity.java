@@ -1,12 +1,16 @@
 package com.micang.baozhu.module.web;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.text.Html;
@@ -47,11 +51,15 @@ import com.jaeger.library.StatusBarUtil;
 import com.just.agentweb.AgentWeb;
 import com.just.agentweb.IAgentWebSettings;
 
+import com.xianwan.sdklibrary.util.AppUtil;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.io.File;
+
 @BindEventBus
 public class MYGameDetailsActivity extends BaseActivity {
+
 
     private LinearLayout llBack;
     private TextView tvTitle;
@@ -276,16 +284,7 @@ public class MYGameDetailsActivity extends BaseActivity {
         getWindow().setAttributes(lp);
     }
 
-//    public String getIMEI() {
-//        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-//        @SuppressLint("MissingPermission") String imei = telephonyManager.getDeviceId();
-//        if (EmptyUtils.isEmpty(imei)) {
-//            //由于Android 10系统限制，无法获取IMEI等标识，如果为空再去获取Android ID作为标识进行传递
-//            String deviceId = Settings.System.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
-//            imei = deviceId;
-//        }
-//        return imei;
-//    }
+
 
     private void getUrl() {
         if ("PCDD".equals(interfaceName)) {
@@ -332,10 +331,16 @@ public class MYGameDetailsActivity extends BaseActivity {
         }
         if ("xhm_api".equals(interfaceName)) {
             HttpUtils.toPlay(moblie, gameId).enqueue(new Observer<BaseResult>() {
+                @SuppressLint("HardwareIds")
                 @Override
                 public void onSuccess(BaseResult response) {
-//                    String imei = getIMEI();
+                    String imei = null;
+                    TelephonyManager telephonyMgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+                    if (telephonyMgr != null) {
+                        imei = telephonyMgr.getDeviceId();
+                    }
                     String url = (String) response.data + "&deviceId=" + imei;
+//                    String url = (String) response.data;
                     Intent intent = new Intent(MYGameDetailsActivity.this, NextMYGameDetailsActivity.class);
 
                     intent.putExtra("URLS", url);

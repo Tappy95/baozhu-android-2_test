@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -225,7 +226,13 @@ public class GameListActivity extends BaseActivity {
                     HttpUtils.toPlay(mobile, gameId).enqueue(new Observer<BaseResult>() {
                         @Override
                         public void onSuccess(BaseResult response) {
-                            String url = (String) response.data;
+                            String imei = null;
+                            TelephonyManager telephonyMgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+                            if (telephonyMgr != null) {
+                                imei = telephonyMgr.getDeviceId();
+                            }
+                            String url = (String) response.data + "&deviceId=" + imei;
+//                            String url = (String) response.data;
                             Intent intent = new Intent(GameListActivity.this, MYGameDetailsActivity.class);
                             intent.putExtra("URLS", url);
                             intent.putExtra("bean", listBean);
