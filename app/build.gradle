@@ -109,6 +109,7 @@ dependencies {
     implementation project(':baselibrary')
     implementation project(':sdklibrary')
     implementation files('libs/umeng-analytics-8.0.2.jar')
+    implementation 'com.toomee:jxwSDK-Android:2.1.2'
     implementation files('libs/umeng-common-2.0.2.jar')
     implementation files('libs/umeng-share-core-6.9.4.jar')
     implementation files('libs/umeng-share-QQ-simplify-6.9.4.jar')

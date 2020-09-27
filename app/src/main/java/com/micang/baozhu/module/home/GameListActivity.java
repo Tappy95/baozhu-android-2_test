@@ -1,9 +1,11 @@
 package com.micang.baozhu.module.home;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -33,11 +35,7 @@ import com.micang.baozhu.http.net.Observer;
 import com.micang.baozhu.module.home.adapter.GameListAdapter;
 import com.micang.baozhu.module.home.adapter.GameTypeAdapter;
 import com.micang.baozhu.module.task.NewTaskActivity;
-import com.micang.baozhu.module.web.GeneralizeActivity;
-import com.micang.baozhu.module.web.MYGameDetailsActivity;
-import com.micang.baozhu.module.web.PCddGameDetailActivity;
-import com.micang.baozhu.module.web.WebActivity;
-import com.micang.baozhu.module.web.XWGameDetailActivity;
+import com.micang.baozhu.module.web.*;
 import com.micang.baozhu.util.CoordinatesBean;
 import com.micang.baozhu.util.EmptyUtils;
 import com.micang.baozhu.util.GyrosensorUtils;
@@ -226,14 +224,14 @@ public class GameListActivity extends BaseActivity {
                     HttpUtils.toPlay(mobile, gameId).enqueue(new Observer<BaseResult>() {
                         @Override
                         public void onSuccess(BaseResult response) {
-                            String imei = null;
-                            TelephonyManager telephonyMgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-                            if (telephonyMgr != null) {
-                                imei = telephonyMgr.getDeviceId();
-                            }
+                            String imei = getIMEI();
+//                            TelephonyManager telephonyMgr = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+//                            if (telephonyMgr != null) {
+//                                imei = telephonyMgr.getDeviceId();
+//                            }
                             String url = (String) response.data + "&deviceId=" + imei;
 //                            String url = (String) response.data;
-                            Intent intent = new Intent(GameListActivity.this, MYGameDetailsActivity.class);
+                            Intent intent = new Intent(GameListActivity.this, RedhatGameDetailActivity.class);
                             intent.putExtra("URLS", url);
                             intent.putExtra("bean", listBean);
                             startActivity(intent);
@@ -303,6 +301,18 @@ public class GameListActivity extends BaseActivity {
             gameListAdapter.notifyDataSetChanged();
         }
         getGameList(typeid);
+    }
+
+    @SuppressLint("MissingPermission")
+    public String getIMEI() {
+        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        @SuppressLint("MissingPermission") String imei = telephonyManager.getDeviceId();
+        if (EmptyUtils.isEmpty(imei)) {
+            //由于Android 10系统限制，无法获取IMEI等标识，如果为空再去获取Android ID作为标识进行传递
+            String deviceId = Settings.System.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+            imei = deviceId;
+        }
+        return imei;
     }
 
     private void getGameType() {

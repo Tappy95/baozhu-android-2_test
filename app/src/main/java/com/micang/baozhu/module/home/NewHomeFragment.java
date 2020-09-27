@@ -58,9 +58,11 @@ import com.micang.baozhu.module.web.AccountDataActivity;
 import com.micang.baozhu.module.web.AdvWebActivity;
 import com.micang.baozhu.module.web.GeneralizeActivity;
 import com.micang.baozhu.module.web.LotteryWebActivity;
+import com.micang.baozhu.module.web.RedhatGameActivity;
 import com.micang.baozhu.module.web.NextMYGameDetailsActivity;
 import com.micang.baozhu.module.web.NextPCddGameDetailActivity;
 import com.micang.baozhu.module.web.NextXWGameDetailActivity;
+
 import com.micang.baozhu.module.web.TaskActivity;
 import com.micang.baozhu.module.web.WebActivity;
 import com.micang.baozhu.module.web.WelfareActivity;
@@ -266,9 +268,12 @@ public class NewHomeFragment extends BaseFragment implements View.OnClickListene
                 if (EmptyUtils.isTokenEmpty(activity) || EmptyUtils.isImeiEmpty(activity)) {
                     startActivity(new Intent(activity, NewLoginActivity.class));
                 } else {
-                    YmConfig.setTitleBarColors(0xffffffff, 0xff000000);
-                    YmConfig.setOutUserId(userId);            //对接金币必须事先调用此接口
-                    YmConfig.openReader();
+//                    YmConfig.setTitleBarColors(0xffffffff, 0xff000000);
+//                    YmConfig.setOutUserId(userId);            //对接金币必须事先调用此接口
+//                    YmConfig.openReader();
+                    Intent intentwel = new Intent(activity, RedhatGameActivity.class);
+                    intentwel.putExtra("url", "fuLiHui");
+                    startActivity(intentwel);
                 }
             }
         });

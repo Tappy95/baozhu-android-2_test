@@ -1,5 +1,6 @@
 package com.micang.baozhu.util;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
@@ -19,6 +20,11 @@ import android.support.annotation.NonNull;
 import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
+import com.micang.baozhu.AppContext;
+import com.micang.baozhu.module.web.MYGameDetailsActivity;
+import com.tbruyelle.rxpermissions2.RxPermissions;
+import io.reactivex.functions.Consumer;
 
 import java.io.File;
 import java.security.MessageDigest;

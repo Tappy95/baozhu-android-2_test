@@ -155,6 +155,8 @@
         <activity android:name=".module.user.BuyVipActivity" />
         <activity android:name=".module.user.AboutPigActivity" />
         <activity android:name=".module.web.MYGameDetailsActivity" />
+        <activity android:name=".module.web.RedhatGameActivity" />
+        <activity android:name=".module.web.RedhatGameDetailActivity" />
         <activity android:name=".module.home.CrazyBoardActivity" />
         <activity android:name=".module.user.MyCardActivity" />
         <activity android:name=".module.user.BindlingAlipayActivity" />

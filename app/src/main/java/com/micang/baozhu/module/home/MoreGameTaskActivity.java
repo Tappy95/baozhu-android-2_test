@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.loadmore.LoadMoreView;
+import com.micang.baozhu.module.web.RedhatGameActivity;
 import com.micang.baselibrary.base.BaseActivity;
 import com.micang.baselibrary.view.CommonPopupWindow;
 import com.micang.baozhu.R;
@@ -158,12 +159,32 @@ public class MoreGameTaskActivity extends BaseActivity implements View.OnClickLi
             intent.putExtra("shortName", shortName);
             intent.putExtra("name", name);
             startActivity(intent);
-        } else {
+        }
+        if ("xw-Android".equals(shortName)) {
             Intent intent = new Intent(MoreGameTaskActivity.this, XWActivity.class);
             intent.putExtra("shortName", shortName);
             intent.putExtra("name", name);
             startActivity(intent);
         }
+        if ("xhm_api".equals(shortName)) {
+            Intent intent = new Intent(MoreGameTaskActivity.this, RedhatGameActivity.class);
+            intent.putExtra("shortName", shortName);
+            intent.putExtra("name", name);
+            startActivity(intent);
+        }
+        if ("爱变现".equals(shortName)) {
+            Intent intent = new Intent(MoreGameTaskActivity.this, XWActivity.class);
+            intent.putExtra("shortName", shortName);
+            intent.putExtra("name", name);
+            startActivity(intent);
+        }
+        if ("聚享玩".equals(shortName)) {
+            Intent intent = new Intent(MoreGameTaskActivity.this, XWActivity.class);
+            intent.putExtra("shortName", shortName);
+            intent.putExtra("name", name);
+            startActivity(intent);
+        }
+
     }
 
     private void hasGameRight(String id, final String shortName, final String name) {
